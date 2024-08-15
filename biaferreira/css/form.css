@@ -2,7 +2,9 @@
 
 body {
     background-color: #edf0f5;
+    font-family: "Roboto", sans-serif;
 }
+
 
 .header {
     background-color: #224fb4;
@@ -55,19 +57,39 @@ body {
     }
 }
 
+.texto{
+    width: 50%;
+    margin: auto;
+    
+}
+
+.texto p{
+    color: #224fb4;
+    text-align: justify;
+}
+
+strong{
+    color: #224fb4;
+    text-transform: uppercase;
+}
+ul{
+    list-style: none;
+}
+
 
 .formulario {
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
+    width: 50%;
     margin: auto;
-    width: 70rem;
     flex-wrap: wrap;
 
 }
 
 input {
+    width: 100%;
     color: #224fb4;
     font-size: 20px;
     height: 30px;
@@ -162,4 +184,64 @@ textarea{
 .footer__rodape .brasao_brasil {
     margin-right: 30px;
     width: 5rem;
+}
+
+@media(max-width:700px){
+    .efeito{
+        position: relative;
+        animation: efeito 5s infinite;
+        animation-direction: alternate-reverse;  
+    }
+    @keyframes efeito {
+        from {left: 0rem;}
+        to {left: 9rem;}
+      }
+
+    .header .efeito {
+         width: 38%;
+       }
+
+    .header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+    .header nav{
+       flex-direction: column;
+        }
+
+    .header nav a{
+        font-size: 0.9rem;
+    }
+
+    .texto{
+        width: 100%;
+    }
+
+    .texto ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input{
+        width: 120%;
+    }
+
+    .footer{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footer .footer__rodape{
+        width: 100%;
+        justify-content: space-evenly;
+      
+    }
+
+    .footer__rodape .brasao_brasil{
+        margin-right: 30px;
+        width: 5rem;
+    }
 }
